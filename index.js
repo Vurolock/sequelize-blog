@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const Article = require('./models/article');
+// const Article = require('./models/article');
 
 app.use(express.static('public'));
 
@@ -13,12 +13,12 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/', (req, res) => {
-    Article.findOne()
-        .then(article => {
-            res.send(`<h1>${article.title}</h1><br><p>${article.content}</p>`);
-        });
-});
+// app.get('/', (req, res) => {
+//     Article.findOne()
+//         .then(article => {
+//             res.send(`<h1>${article.title}</h1><br><p>${article.content}</p>`);
+//         });
+// });
 
 // app.get('/heroes', (req, res) => {
 //     res.send('here are the heroes');
